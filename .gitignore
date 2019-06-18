@@ -1,0 +1,7 @@
+.env/
+.env3/
+build/
+dist/
+
+*.pyc
+version.txt
