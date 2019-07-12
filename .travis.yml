@@ -21,3 +21,4 @@ deploy:
     condition: "$TRAVIS_TAG =~ v[0-9]+\\.[0-9]+\\.[0-9]+ && $BUILD_SDIST=true"
   password:
     secure: cRly20XGTuBFyw2HCtMJzwyLMnainooeY0Z2gnatj7ZEtKsLiU6LyxGOTDMZQA9kFdRXe0tBrd9E7xUnOK8c9viZ1M5tImKrj3w36fQIdUNKcx/jFPUKDF60Vu/BafbPbbZZesDpzKrKYBWePZi3DvHvlBZXMkYtP1jOSa74vETLBp/JaMYduFpEv5xA2+3RCHP6sc/w0pTpn9b/f9RCW6d+WMMUOic5EAwMon71CTarBqevd6j3JNyN7GqRcHAOxAqYThShXLWuWyMdOEtWRxxUr2R7IxSx0kSrRv0YFZIedaMXCmOhjAsZnKBheV9vO4to7SsxgIpuuNbs6cK9+ix7OxEgVAN1jdC1gO5Pq7ujy5xW/O+YfP3nVjVAcVFJoGqyKeXXzBR+1+yZwY7BU6mzGua9omMXZ2AXSgliXJWhoP81NoCCvwwSm9rLfE11m8LTpFD7jVmn/EZTycWRLezOyjvPjjZcB8mjZiZgN+J/QSdGJ+4ScO8b6BvXD/l5M+/Jl8Avh4lM8ENVl1k4lcMcmZ4t9zx76XG65JKxLS6nwlxGlZ5fveyyh6J1UZqDmj044Uw9GL7DxwOpIzWHHt0cfsG82XPHFnZqN7LdjXq+NVN+Bahf/nhrLwyk1D/pIDkF7Npyn2UVD18Syw5LS2nwFgoBSYXq8IgDeiYpNsA=
+  distributions: "sdist bdist_wheel bdist_egg"
