@@ -8,6 +8,7 @@ matrix:
     env: BUILD_SDIST=true
 install:
 - pip install -r requirements.txt
+- pip install SimpleWebSocketServer
 script:
 - python test/__init__.py
 before_deploy: echo $TRAVIS_TAG | sed 's/^.//' > version.txt
