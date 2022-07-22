@@ -32,7 +32,7 @@ jobs:
           pip install -r requirements.txt
       - name: Run Tests
         run: |
-          pytest test/ --cov=testbase --cov-report=xml
+          pytest test/ --cov=. --cov-report=xml
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
         with:
