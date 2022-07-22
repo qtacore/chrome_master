@@ -33,7 +33,7 @@ def parse_requirements():
 if __name__ == "__main__":
     setup(
         version=generate_version(),
-        name="chrome_master",
+        name="chrome-master",
         cmdclass={},
         packages=find_packages(exclude=(
             "test",
