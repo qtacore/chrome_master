@@ -2,12 +2,13 @@
 """
 打包脚本
 """
-    
+
 import os
 from setuptools import setup, find_packages
-  
+
 BASE_DIR = os.path.realpath(os.path.dirname(__file__))
-  
+
+
 def generate_version():
     version = "1.0.0"
     if os.path.isfile(os.path.join(BASE_DIR, "version.txt")):
@@ -16,7 +17,8 @@ def generate_version():
             if content:
                 version = content
     return version
-  
+
+
 def parse_requirements():
     reqs = []
     if os.path.isfile(os.path.join(BASE_DIR, "requirements.txt")):
@@ -26,14 +28,19 @@ def parse_requirements():
                 if line:
                     reqs.append(line)
     return reqs
-  
-if __name__ == "__main__":  
+
+
+if __name__ == "__main__":
     setup(
         version=generate_version(),
-        name="chrome_master",
+        name="chrome-master",
         cmdclass={},
-        packages=find_packages(),
+        packages=find_packages(exclude=(
+            "test",
+            "test.*",
+        )),
         author="Tencent",
-        license="Copyright(c)2010-2019 Tencent All Rights Reserved. ",
+        license="Copyright(c)2010-2022 Tencent All Rights Reserved. ",
         install_requires=parse_requirements(),
+        extras_require={'dom': ['py-dom-xpath-six']},
     )
